@@ -8,7 +8,12 @@
 import SwiftUI
 
 struct HomeView: View {
+<<<<<<< HEAD
     @EnvironmentObject var viewModel: AuthViewModel
+=======
+    
+    @ObservedObject var viewModel = FeedViewModel()
+>>>>>>> fe69250147bd5879a8eab7ba441c83d22e1e0bcb
     
     var body: some View {
         VStack (alignment: .leading, spacing: 12){
