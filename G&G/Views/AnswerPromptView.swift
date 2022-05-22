@@ -94,6 +94,6 @@ struct AnswerPromptView_Previews: PreviewProvider {
     static var previews: some View {
         AnswerPromptView()
             .previewDevice("iPhone 11 Pro")
-            .previewInterfaceOrientation(.landscapeLeft)
+            .previewInterfaceOrientation(.portrait)
     }
 }
