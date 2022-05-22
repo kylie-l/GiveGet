@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AnswerPromptView: View {
     
-    
+    @State var selection: Int? = nil
     @State private var promptAnswer = ""
     @EnvironmentObject var authViewModel: AuthViewModel
     @ObservedObject var viewModel = UploadPrompt()
@@ -61,26 +61,27 @@ struct AnswerPromptView: View {
                     }
                     
                     
+                    NavigationLink (destination: HomeView(), tag: 1, selection: $selection) {
+                        Button {
+                            viewModel.uploadPrompt(withCaption: promptAnswer)
+                            self.selection = 1
+                        } label: {
+                            
+                            Text("SUBMIT")
+                                .padding()
+                                .frame(width: 202, height: 92)
+                                    .background(Color("Greyish Green"))
+                                .foregroundColor(.white)
+                                .cornerRadius(20)
+                                .font(.system(size: 22, weight: .bold))
+                                .padding(.top, 70)
+                                
+                            
+                                
+                                
+                        }
                     
-                    Button {
-                        viewModel.uploadPrompt(withCaption: promptAnswer)
-                        
-                    } label: {
-                        
-                        Text("SUBMIT")
-                            .padding()
-                            .frame(width: 202, height: 92)
-                                .background(Color("Greyish Green"))
-                            .foregroundColor(.white)
-                            .cornerRadius(20)
-                            .font(.system(size: 22, weight: .bold))
-                            .padding(.top, 70)
-                            
-                        
-                            
-                            
                     }
-                    
                 }
                 
                

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct JournalViewRow: View {
+    let prompt: Prompt
     var body: some View {
         VStack(alignment: .leading, spacing: 12){
             
@@ -19,14 +20,14 @@ struct JournalViewRow: View {
                 //username + time
                 VStack(alignment: .leading, spacing: 3){
                     Text("Username")
-                    Text("Time")
+                    Text(prompt.timestamp)
                 }
             }
             
             //Journal entry
             ZStack {
                 Color.green
-                Text("journal entry ewfk edkn e")
+                Text(prompt.caption)
                     .multilineTextAlignment(.leading)
                     .aspectRatio(contentMode: .fit)
                 
@@ -39,8 +40,4 @@ struct JournalViewRow: View {
     }
 }
 
-struct JournalViewRow_Previews: PreviewProvider {
-    static var previews: some View {
-        JournalViewRow()
-    }
-}
+

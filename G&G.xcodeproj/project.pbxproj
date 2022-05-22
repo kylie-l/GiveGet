@@ -32,6 +32,7 @@
 		E32E38F0283A32BE006EF481 /* UploadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32E38EF283A32BE006EF481 /* UploadService.swift */; };
 		E32E38F2283A33DE006EF481 /* UploadPrompt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32E38F1283A33DE006EF481 /* UploadPrompt.swift */; };
 		E32E38F4283A39E5006EF481 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32E38F3283A39E5006EF481 /* FeedViewModel.swift */; };
+		E32E38F7283A495A006EF481 /* Prompt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32E38F6283A495A006EF481 /* Prompt.swift */; };
 		E347F1DB283A079C00919311 /* AnswerPromptInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E347F1DA283A079C00919311 /* AnswerPromptInputField.swift */; };
 		E3AEB48E2839FC22009CA5D7 /* AnswerPromptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AEB48D2839FC22009CA5D7 /* AnswerPromptView.swift */; };
 /* End PBXBuildFile section */
@@ -78,6 +79,7 @@
 		E32E38EF283A32BE006EF481 /* UploadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadService.swift; sourceTree = "<group>"; };
 		E32E38F1283A33DE006EF481 /* UploadPrompt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPrompt.swift; sourceTree = "<group>"; };
 		E32E38F3283A39E5006EF481 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
+		E32E38F6283A495A006EF481 /* Prompt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prompt.swift; sourceTree = "<group>"; };
 		E347F1DA283A079C00919311 /* AnswerPromptInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerPromptInputField.swift; sourceTree = "<group>"; };
 		E3AEB48D2839FC22009CA5D7 /* AnswerPromptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerPromptView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -227,6 +229,7 @@
 		E32E38F5283A3C44006EF481 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E32E38F6283A495A006EF481 /* Prompt.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 				E3AEB48E2839FC22009CA5D7 /* AnswerPromptView.swift in Sources */,
 				E32E38F2283A33DE006EF481 /* UploadPrompt.swift in Sources */,
 				B8DAFEBA283A1D5000E3BE05 /* AuthViewModel.swift in Sources */,
+				E32E38F7283A495A006EF481 /* Prompt.swift in Sources */,
 				B8B0D4302839956D00D7ACCE /* Login.swift in Sources */,
 				B8B0D43228399C5300D7ACCE /* HomeView.swift in Sources */,
 				B815E1ED2839878C00A70C5F /* ContentView.swift in Sources */,

@@ -8,6 +8,7 @@
 import Foundation
 
 class FeedViewModel: ObservableObject{
+    @Published var prompts = [Prompt]()
     let service = UploadService()
     
     init() {
@@ -15,6 +16,8 @@ class FeedViewModel: ObservableObject{
     }
     
     func fetchPrompts(){
-        service.fetchPrompts() 
+        service.fetchPrompts{prompts in
+            self.prompts = prompts
+        }
     }
 }

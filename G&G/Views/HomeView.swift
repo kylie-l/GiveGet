@@ -41,9 +41,9 @@ struct HomeView: View {
             
             ScrollView {
                 LazyVStack {
-                    ForEach(0 ... 10, id: \.self) { _ in
+                    ForEach(viewModel.prompts) { prompt in
                         Spacer()
-                        JournalViewRow()
+                        JournalViewRow(prompt: prompt)
                         Spacer()
                     }
                 }

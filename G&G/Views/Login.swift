@@ -80,7 +80,6 @@ struct Login: View {
                                 .overlay(RoundedRectangle(cornerRadius: 25).stroke(Color.green, lineWidth: 2))
                         }
                         .cornerRadius(25)
-                        
                     }
                 }
                 .padding(.horizontal, 40)
