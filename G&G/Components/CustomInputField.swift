@@ -15,16 +15,17 @@ struct CustomInputField: View {
     var body: some View {
         VStack {
             HStack {
-                Spacer()
+                
                 VStack {
                     Image(systemName: imageName)
                         .resizable()
                         .scaledToFit()
-                        .frame(width: 20,height: 20)
+                        .frame(width: 25,height: 25)
                         .foregroundColor(Color(.white))
                 }
-                .frame(width: 25,height: 25)
+                .frame(width: 50,height: 50)
                 .background(Color.green)
+                .cornerRadius(30)
                 
                 TextField(placeholderText, text: $text)
                     .foregroundColor(Color(.white))
@@ -32,6 +33,7 @@ struct CustomInputField: View {
             .background(Color.yellow)
             .cornerRadius(30)
         }
+        .shadow(color: .gray, radius: 1, x:0, y:4)
     }
 }
 

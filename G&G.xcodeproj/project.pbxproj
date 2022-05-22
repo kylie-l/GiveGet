@@ -22,6 +22,7 @@
 		B8B0D43D2839B2FD00D7ACCE /* JournalViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B0D43C2839B2FD00D7ACCE /* JournalViewRow.swift */; };
 		B8B0D43F2839C37500D7ACCE /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B0D43E2839C37500D7ACCE /* SignUpView.swift */; };
 		B8B0D4412839D22300D7ACCE /* CustomInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B0D4402839D22300D7ACCE /* CustomInputField.swift */; };
+		B8B0D4432839E98300D7ACCE /* AuthHeadingV.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B0D4422839E98300D7ACCE /* AuthHeadingV.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		B8B0D43C2839B2FD00D7ACCE /* JournalViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalViewRow.swift; sourceTree = "<group>"; };
 		B8B0D43E2839C37500D7ACCE /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		B8B0D4402839D22300D7ACCE /* CustomInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInputField.swift; sourceTree = "<group>"; };
+		B8B0D4422839E98300D7ACCE /* AuthHeadingV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthHeadingV.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				B8B0D4402839D22300D7ACCE /* CustomInputField.swift */,
+				B8B0D4422839E98300D7ACCE /* AuthHeadingV.swift */,
 				B8B0D43B2839B2DB00D7ACCE /* Journals */,
 			);
 			path = Components;
@@ -310,6 +313,7 @@
 				B8B0D4302839956D00D7ACCE /* Login.swift in Sources */,
 				B8B0D43228399C5300D7ACCE /* HomeView.swift in Sources */,
 				B815E1ED2839878C00A70C5F /* ContentView.swift in Sources */,
+				B8B0D4432839E98300D7ACCE /* AuthHeadingV.swift in Sources */,
 				B8B0D43828399C8A00D7ACCE /* MessagesView.swift in Sources */,
 				B8B0D43D2839B2FD00D7ACCE /* JournalViewRow.swift in Sources */,
 				B8B0D43428399C7000D7ACCE /* AssignedView.swift in Sources */,

@@ -11,7 +11,7 @@ import SwiftUI
 struct G_GApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            Login()
         }
     }
 }

@@ -8,8 +8,45 @@
 import SwiftUI
 
 struct SignUpView: View {
+    @State private var username = ""
+    @State private var email = ""
+    @State private var password = ""
+    @State private var confirm = ""
+    @Environment(\.presentationMode) var presentationMode
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            AuthHeadingV(title: "SIGN UP")
+                .padding(.bottom, 20)
+                .padding(.top, 20)
+            
+            //info
+            VStack{
+                CustomInputField(imageName: "person", placeholderText: "Enter Username", text: $username)
+                    .padding(.bottom, 20)
+                CustomInputField(imageName: "envelope", placeholderText: "Enter Email", text: $email)
+                    .padding(.bottom, 20)
+                CustomInputField(imageName: "lock", placeholderText: "Enter Password", text: $password)
+                    .padding(.bottom, 20)
+                CustomInputField(imageName: "lock", placeholderText: "Confirm Password", text: $confirm)
+                    .padding(.bottom, 40)
+                
+                Button {
+                    print("confirm")
+                    //presentationMode.wrappedValue.dismiss()
+                } label: {
+                    Text("CONFIRM")
+                        .font(.headline)
+                        .foregroundColor(.white)
+                        .frame(width: 340, height: 50)
+                        .background(.green)
+                        .clipShape(Capsule())
+                }
+                .shadow(color: .gray, radius: 1, x:0, y:4)
+            }
+            .padding(32)
+            
+            Spacer()
+        }
     }
 }
 
