@@ -8,7 +8,14 @@
 import SwiftUI
 
 struct AnswerPromptView: View {
+    
+    
     @State private var promptAnswer = ""
+    @EnvironmentObject var authViewModel: AuthViewModel
+    @ObservedObject var viewModel = UploadPrompt()
+    
+    
+    
     var body: some View {
         VStack{
             //Top Menu Bar
@@ -56,7 +63,7 @@ struct AnswerPromptView: View {
                     
                     
                     Button {
-                        print("Submit Message")
+                        viewModel.uploadPrompt(withCaption: promptAnswer)
                     } label: {
                         
                         Text("SUBMIT")

@@ -14,7 +14,6 @@
 		B815E1FC283987A200A70C5F /* G_GTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B815E1FB283987A200A70C5F /* G_GTests.swift */; };
 		B815E206283987A200A70C5F /* G_GUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B815E205283987A200A70C5F /* G_GUITests.swift */; };
 		B815E208283987A200A70C5F /* G_GUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B815E207283987A200A70C5F /* G_GUITestsLaunchTests.swift */; };
-		B819123B283A003F0059D647 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B819123A283A003F0059D647 /* TestView.swift */; };
 		B819123D283A08D30059D647 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B819123C283A08D30059D647 /* GoogleService-Info.plist */; };
 		B8191240283A0A7A0059D647 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = B819123F283A0A7A0059D647 /* FirebaseAuth */; };
 		B8191242283A0A7A0059D647 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = B8191241283A0A7A0059D647 /* FirebaseFirestore */; };
@@ -30,6 +29,8 @@
 		B8B0D4412839D22300D7ACCE /* CustomInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B0D4402839D22300D7ACCE /* CustomInputField.swift */; };
 		B8B0D4432839E98300D7ACCE /* AuthHeadingV.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B0D4422839E98300D7ACCE /* AuthHeadingV.swift */; };
 		B8DAFEBA283A1D5000E3BE05 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DAFEB9283A1D5000E3BE05 /* AuthViewModel.swift */; };
+		E32E38F0283A32BE006EF481 /* UploadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32E38EF283A32BE006EF481 /* UploadService.swift */; };
+		E32E38F2283A33DE006EF481 /* UploadPrompt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32E38F1283A33DE006EF481 /* UploadPrompt.swift */; };
 		E347F1DB283A079C00919311 /* AnswerPromptInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E347F1DA283A079C00919311 /* AnswerPromptInputField.swift */; };
 		E3AEB48E2839FC22009CA5D7 /* AnswerPromptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AEB48D2839FC22009CA5D7 /* AnswerPromptView.swift */; };
 /* End PBXBuildFile section */
@@ -62,7 +63,6 @@
 		B815E201283987A200A70C5F /* G&GUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "G&GUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B815E205283987A200A70C5F /* G_GUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = G_GUITests.swift; sourceTree = "<group>"; };
 		B815E207283987A200A70C5F /* G_GUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = G_GUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		B819123A283A003F0059D647 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		B819123C283A08D30059D647 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		B8B0D42F2839956D00D7ACCE /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		B8B0D43128399C5300D7ACCE /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -74,6 +74,8 @@
 		B8B0D4402839D22300D7ACCE /* CustomInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInputField.swift; sourceTree = "<group>"; };
 		B8B0D4422839E98300D7ACCE /* AuthHeadingV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthHeadingV.swift; sourceTree = "<group>"; };
 		B8DAFEB9283A1D5000E3BE05 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		E32E38EF283A32BE006EF481 /* UploadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadService.swift; sourceTree = "<group>"; };
+		E32E38F1283A33DE006EF481 /* UploadPrompt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPrompt.swift; sourceTree = "<group>"; };
 		E347F1DA283A079C00919311 /* AnswerPromptInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerPromptInputField.swift; sourceTree = "<group>"; };
 		E3AEB48D2839FC22009CA5D7 /* AnswerPromptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerPromptView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -130,6 +132,7 @@
 		B815E1E92839878C00A70C5F /* G&G */ = {
 			isa = PBXGroup;
 			children = (
+				E32E38EE283A3248006EF481 /* Services */,
 				B815E1EC2839878C00A70C5F /* ContentView.swift */,
 				B8B0D43A2839B2AB00D7ACCE /* Components */,
 				B8DAFEB8283A1D3A00E3BE05 /* ViewModels */,
@@ -172,7 +175,6 @@
 			children = (
 				B8B0D42F2839956D00D7ACCE /* Login.swift */,
 				B8B0D43E2839C37500D7ACCE /* SignUpView.swift */,
-				B819123A283A003F0059D647 /* TestView.swift */,
 				B8B0D43128399C5300D7ACCE /* HomeView.swift */,
 				B8B0D43528399C7E00D7ACCE /* JournalView.swift */,
 				B8B0D43328399C7000D7ACCE /* AssignedView.swift */,
@@ -205,8 +207,17 @@
 			isa = PBXGroup;
 			children = (
 				B8DAFEB9283A1D5000E3BE05 /* AuthViewModel.swift */,
+				E32E38F1283A33DE006EF481 /* UploadPrompt.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		E32E38EE283A3248006EF481 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E32E38EF283A32BE006EF481 /* UploadService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -349,15 +360,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B819123B283A003F0059D647 /* TestView.swift in Sources */,
 				B8B0D4412839D22300D7ACCE /* CustomInputField.swift in Sources */,
 				B8B0D43628399C7E00D7ACCE /* JournalView.swift in Sources */,
 				E347F1DB283A079C00919311 /* AnswerPromptInputField.swift in Sources */,
 				E3AEB48E2839FC22009CA5D7 /* AnswerPromptView.swift in Sources */,
+				E32E38F2283A33DE006EF481 /* UploadPrompt.swift in Sources */,
 				B8DAFEBA283A1D5000E3BE05 /* AuthViewModel.swift in Sources */,
 				B8B0D4302839956D00D7ACCE /* Login.swift in Sources */,
 				B8B0D43228399C5300D7ACCE /* HomeView.swift in Sources */,
 				B815E1ED2839878C00A70C5F /* ContentView.swift in Sources */,
+				E32E38F0283A32BE006EF481 /* UploadService.swift in Sources */,
 				B8B0D4432839E98300D7ACCE /* AuthHeadingV.swift in Sources */,
 				B8B0D43828399C8A00D7ACCE /* MessagesView.swift in Sources */,
 				B8B0D43D2839B2FD00D7ACCE /* JournalViewRow.swift in Sources */,
