@@ -8,7 +8,7 @@
 import Firebase
 
 struct UploadService{
-    
+    /*
     func uploadPrompt(caption: String, completion: @escaping(Bool) -> Void){
         
             
@@ -26,14 +26,14 @@ struct UploadService{
         
     }
     
-    /*func fetchPrompts(){
+    func fetchPrompts(){
         Firestore.firestore().collection("prompts").getDocuments { snapshot, _ in
             guard let documents = snapshot?.documents else {return}
         }
         documents.forEach { doc in
             print (doc.data())
         }
-    }*/
-    
+    }
+    */
 }
 

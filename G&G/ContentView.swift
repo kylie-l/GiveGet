@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State var selectedIndex = 1
+    @State var answeredprompt = false
     @EnvironmentObject var viewModel: AuthViewModel
     
     let icons = [
