@@ -24,6 +24,7 @@
 		B8B0D43F2839C37500D7ACCE /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B0D43E2839C37500D7ACCE /* SignUpView.swift */; };
 		B8B0D4412839D22300D7ACCE /* CustomInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B0D4402839D22300D7ACCE /* CustomInputField.swift */; };
 		B8B0D4432839E98300D7ACCE /* AuthHeadingV.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B0D4422839E98300D7ACCE /* AuthHeadingV.swift */; };
+		E347F1DB283A079C00919311 /* AnswerPromptInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E347F1DA283A079C00919311 /* AnswerPromptInputField.swift */; };
 		E3AEB48E2839FC22009CA5D7 /* AnswerPromptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AEB48D2839FC22009CA5D7 /* AnswerPromptView.swift */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +66,7 @@
 		B8B0D43E2839C37500D7ACCE /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		B8B0D4402839D22300D7ACCE /* CustomInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInputField.swift; sourceTree = "<group>"; };
 		B8B0D4422839E98300D7ACCE /* AuthHeadingV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthHeadingV.swift; sourceTree = "<group>"; };
+		E347F1DA283A079C00919311 /* AnswerPromptInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerPromptInputField.swift; sourceTree = "<group>"; };
 		E3AEB48D2839FC22009CA5D7 /* AnswerPromptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerPromptView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -171,6 +173,7 @@
 			children = (
 				B8B0D4402839D22300D7ACCE /* CustomInputField.swift */,
 				B8B0D4422839E98300D7ACCE /* AuthHeadingV.swift */,
+				E347F1DA283A079C00919311 /* AnswerPromptInputField.swift */,
 				B8B0D43B2839B2DB00D7ACCE /* Journals */,
 			);
 			path = Components;
@@ -317,6 +320,7 @@
 				B819123B283A003F0059D647 /* TestView.swift in Sources */,
 				B8B0D4412839D22300D7ACCE /* CustomInputField.swift in Sources */,
 				B8B0D43628399C7E00D7ACCE /* JournalView.swift in Sources */,
+				E347F1DB283A079C00919311 /* AnswerPromptInputField.swift in Sources */,
 				E3AEB48E2839FC22009CA5D7 /* AnswerPromptView.swift in Sources */,
 				B8B0D4302839956D00D7ACCE /* Login.swift in Sources */,
 				B8B0D43228399C5300D7ACCE /* HomeView.swift in Sources */,
@@ -487,6 +491,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"G&G/Preview Content\"";
+				DEVELOPMENT_TEAM = 3SG24A7U2K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -515,6 +520,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"G&G/Preview Content\"";
+				DEVELOPMENT_TEAM = 3SG24A7U2K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

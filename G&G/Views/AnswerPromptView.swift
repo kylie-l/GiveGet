@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct AnswerPromptView: View {
+    @State private var promptAnswer = ""
     var body: some View {
         VStack{
             //Top Menu Bar
@@ -19,6 +20,8 @@ struct AnswerPromptView: View {
                 VStack{
                     Text("DAILY JOURNAL")
                         .padding()
+                        .font(.system(size: 22, weight: .bold))
+                        
                         
                         
                     
@@ -38,15 +41,36 @@ struct AnswerPromptView: View {
                 
                 
                 VStack{
-                    RoundedRectangle(cornerRadius: 30)
-                        .frame(width: 327, height: 294)
-                        .foregroundColor(Color("Accent Cream"))
+                    
+                    ZStack{
+                        
+                        RoundedRectangle(cornerRadius: 30)
+                            .frame(width: 327, height: 294)
+                            .foregroundColor(Color("Accent Cream"))
+                        
+                        AnswerPromptInputField("Write your message", text: $promptAnswer)
+                        
+                        
+                    }
+                    
                     
                     
                     Button {
                         print("Submit Message")
                     } label: {
-                        Text("Submit")
+                        
+                        Text("SUBMIT")
+                            .padding()
+                            .frame(width: 202, height: 92)
+                                .background(Color("Greyish Green"))
+                            .foregroundColor(.white)
+                            .cornerRadius(20)
+                            .font(.system(size: 22, weight: .bold))
+                            .padding(.top, 70)
+                            
+                        
+                            
+                            
                     }
                     
                 }
@@ -69,5 +93,7 @@ struct AnswerPromptView: View {
 struct AnswerPromptView_Previews: PreviewProvider {
     static var previews: some View {
         AnswerPromptView()
+            .previewDevice("iPhone 11 Pro")
+            .previewInterfaceOrientation(.landscapeLeft)
     }
 }
