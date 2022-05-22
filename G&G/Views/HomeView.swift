@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct HomeView: View {
+    
+    @ObservedObject var viewModel = FeedViewModel()
+    
     var body: some View {
         VStack (alignment: .leading, spacing: 12){
 

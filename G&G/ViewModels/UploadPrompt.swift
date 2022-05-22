@@ -11,6 +11,6 @@ class UploadPrompt: ObservableObject{
     let service = UploadService()
     
     func uploadPrompt(withCaption caption: string){
-        service.UploadPrompt(caption: caption)
+        service.uploadPrompt(caption: caption)
     }
 }
