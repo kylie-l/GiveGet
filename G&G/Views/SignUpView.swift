@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct SignUpView: View {
-    //test
     @State private var username = ""
     @State private var email = ""
     @State private var password = ""
