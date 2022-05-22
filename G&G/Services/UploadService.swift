@@ -7,6 +7,7 @@
 
 import Firebase
 struct UploadService{
+    /*
     struct uploadPrompt(caption: String){
         
             
@@ -26,6 +27,6 @@ struct UploadService{
             print (doc.data())
         }
     }
-    
+    */
 }
 

@@ -8,23 +8,31 @@
 import SwiftUI
 
 struct HomeView: View {
-    
-    @ObservedObject var viewModel = FeedViewModel()
+    @EnvironmentObject var viewModel: AuthViewModel
     
     var body: some View {
         VStack (alignment: .leading, spacing: 12){
-
             ZStack(alignment: .leading){
                 Color(.systemBlue)
                     .ignoresSafeArea()
                 VStack(alignment: .leading, spacing: 0) {
                     Text("Daily Journals")
                         .font(.system(size: 35, weight: .semibold, design: .default))
-                    Text("What are you grateful for today?")
+                    HStack {
+                        Text("What are you grateful for today?")
+                        
+                        Spacer()
+                        Button {
+                            viewModel.signOut()
+                        } label: {
+                            Text("Log Out")
+                                .foregroundColor(Color.black)
+                        }
+                    }
                 }
-                .padding()
+                .padding(.horizontal)
             }
-            .frame(height: 100)
+            .frame(height: 90)
             
             ScrollView {
                 LazyVStack {

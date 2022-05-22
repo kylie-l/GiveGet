@@ -9,8 +9,9 @@ import Foundation
 
 class UploadPrompt: ObservableObject{
     let service = UploadService()
-    
+    /*
     func uploadPrompt(withCaption caption: string){
         service.uploadPrompt(caption: caption)
     }
+     */
 }

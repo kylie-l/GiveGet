@@ -63,7 +63,7 @@ struct AnswerPromptView: View {
                     
                     
                     Button {
-                        viewModel.uploadPrompt(withCaption: promptAnswer)
+                       // viewModel.uploadPrompt(withCaption: promptAnswer)
                     } label: {
                         
                         Text("SUBMIT")

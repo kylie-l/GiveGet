@@ -34,7 +34,7 @@ struct SignUpView: View {
                 
                 Button {
                     viewModel.register(username:username,
-                                       password: password, confirm: confirm, email: email)
+                                       password: password, confirm: confirm, withEmail: email)
                 } label: {
                     Text("CONFIRM")
                         .font(.headline)

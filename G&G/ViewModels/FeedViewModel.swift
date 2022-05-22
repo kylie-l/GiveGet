@@ -15,6 +15,6 @@ class FeedViewModel: ObservableObject{
     }
     
     func fetchPrompts(){
-        service.fetchPrompts() 
+        //service.fetchPrompts() 
     }
 }
