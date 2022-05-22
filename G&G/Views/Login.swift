@@ -11,6 +11,8 @@ struct Login: View {
     @State private var username = ""
     @State private var password = ""
     @State var selection: Int? = nil
+    @EnvironmentObject var viewModel: AuthViewModel
+    
     var body: some View {
         NavigationView {
             //parent container
@@ -27,7 +29,7 @@ struct Login: View {
                         .padding(.bottom, 25)
                     
                     Button {
-                        print("Sign In")
+                        viewModel.login(username: username, password: password)
                     } label: {
                         Text("Sign In")
                             .font(.headline)

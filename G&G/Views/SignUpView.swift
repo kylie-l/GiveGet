@@ -13,6 +13,8 @@ struct SignUpView: View {
     @State private var password = ""
     @State private var confirm = ""
     @Environment(\.presentationMode) var presentationMode
+    @EnvironmentObject var viewModel: AuthViewModel
+    
     var body: some View {
         VStack {
             AuthHeadingV(title: "SIGN UP")
@@ -31,8 +33,8 @@ struct SignUpView: View {
                     .padding(.bottom, 40)
                 
                 Button {
-                    print("confirm")
-                    //presentationMode.wrappedValue.dismiss()
+                    viewModel.register(username:username,
+                                       password: password, confirm: confirm, email: email)
                 } label: {
                     Text("CONFIRM")
                         .font(.headline)

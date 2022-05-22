@@ -11,12 +11,17 @@ import Firebase
 @main
 struct G_GApp: App {
     
+    @StateObject var viewModel = AuthViewModel()
+    
     init() {
         FirebaseApp.configure()
     }
     var body: some Scene {
         WindowGroup {
-            Login()
+            NavigationView {
+                ContentView()
+            }
+            .environmentObject(viewModel)
         }
     }
 }

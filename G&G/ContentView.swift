@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State var selectedIndex = 1
+    @EnvironmentObject var viewModel: AuthViewModel
     
     let icons = [
         "book",
@@ -17,6 +18,26 @@ struct ContentView: View {
     ]
 
     var body: some View {
+        Group {
+            //no user logged in
+            if viewModel.userSession == nil {
+                Login()
+            } else { //have logged in user
+                mainInterfaceView
+            }
+        }
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+        .previewInterfaceOrientation(.portrait)
+    }
+}
+
+extension ContentView {
+    var mainInterfaceView: some View {
         VStack {
             //Content
             ZStack {
@@ -51,12 +72,5 @@ struct ContentView: View {
                 }
             }
         }
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-        .previewInterfaceOrientation(.portrait)
     }
 }
