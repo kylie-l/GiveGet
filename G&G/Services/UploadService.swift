@@ -6,15 +6,19 @@
 //
 
 import Firebase
-
-struct uploadPrompt(caption: String){
-    
-    guard let uid = Auth.auth().currentUser?.uid else {return}
-    
-    let data = ["uid": uid, "caption": caption,
-                "timestamp": Timestamp(date: Date())] as [String : Any]
-    Firestore.firestore().collection("prompts").document().setData(data) { _ in
-        print("Uploaded Prompt")
+struct UploadService{
+    struct uploadPrompt(caption: String){
+        
+            
+        let data = ["caption": caption,
+                    "timestamp": Timestamp(date: Date())] as [String : Any]
+        Firestore.firestore().collection("prompts").document().setData(data) { _ in
+            print("Uploaded Prompt")
+        }
+        
     }
     
+    
+    
 }
+
