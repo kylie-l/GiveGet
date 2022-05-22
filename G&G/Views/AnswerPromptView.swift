@@ -41,11 +41,17 @@ struct AnswerPromptView: View {
                     RoundedRectangle(cornerRadius: 30)
                         .frame(width: 327, height: 294)
                         .foregroundColor(Color("Accent Cream"))
-                        
-                        
                     
+                    
+                    Button {
+                        print("Submit Message")
+                    } label: {
+                        Text("Submit")
+                    }
                     
                 }
+                
+               
                 
                 
                 
