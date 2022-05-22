@@ -8,9 +8,16 @@
 import Foundation
 
 class UploadPrompt: ObservableObject{
+    
     let service = UploadService()
     
-    func uploadPrompt(withCaption caption: string){
-        service.uploadPrompt(caption: caption)
+    func uploadPrompt(withCaption caption: String){
+        service.uploadPrompt(caption: caption) { success in
+            if success {
+                return
+            } else{
+                return
+            }
+        }
     }
 }

@@ -6,26 +6,34 @@
 //
 
 import Firebase
+
 struct UploadService{
-    struct uploadPrompt(caption: String){
+    
+    func uploadPrompt(caption: String, completion: @escaping(Bool) -> Void){
         
             
         let data = ["caption": caption,
                     "timestamp": Timestamp(date: Date())] as [String : Any]
-        Firestore.firestore().collection("prompts").document().setData(data) { _ in
-            print("Uploaded Prompt")
+        
+        Firestore.firestore().collection("prompts").document().setData(data) { error in
+            if let error = error {
+                print ("DEBUG: Failed to upload prompt: \(error.localizedDescription)")
+                completion(false)
+                return
+            }
+            completion(true)
         }
         
     }
     
-    func fetchPrompts(){
+    /*func fetchPrompts(){
         Firestore.firestore().collection("prompts").getDocuments { snapshot, _ in
             guard let documents = snapshot?.documents else {return}
         }
         documents.forEach { doc in
             print (doc.data())
         }
-    }
+    }*/
     
 }
 
