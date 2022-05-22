@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State var selectedIndex = 1
-    @State var answeredprompt = false
+    //@EnvironmentObject var answered: Toggles
     @EnvironmentObject var viewModel: AuthViewModel
     
     let icons = [
@@ -23,8 +23,14 @@ struct ContentView: View {
             //no user logged in
             if viewModel.userSession == nil {
                 Login()
-            } else { //have logged in user
-                mainInterfaceView
+            }
+            else { //have logged in user
+                if viewModel.answeredPrompt == false { //answeredprompt
+                    AnswerPromptView()
+                }
+                else {
+                    mainInterfaceView
+                }
             }
         }
     }

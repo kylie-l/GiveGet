@@ -12,6 +12,7 @@ struct AnswerPromptView: View {
     @State var selection: Int? = nil
     @State private var promptAnswer = ""
     @EnvironmentObject var authViewModel: AuthViewModel
+    //@EnvironmentObject var answeredPrompt: Toggles
     @ObservedObject var viewModel = UploadPrompt()
     
     
@@ -64,6 +65,7 @@ struct AnswerPromptView: View {
                     NavigationLink (destination: HomeView(), tag: 1, selection: $selection) {
                         Button {
                             viewModel.uploadPrompt(withCaption: promptAnswer)
+                            authViewModel.on()
                             self.selection = 1
                         } label: {
                             

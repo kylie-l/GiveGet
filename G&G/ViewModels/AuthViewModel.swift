@@ -10,11 +10,20 @@ import Firebase
 
 class AuthViewModel: ObservableObject {
     @Published var userSession: FirebaseAuth.User?
+    @Published var answeredPrompt: Bool
     
     init() {
         self.userSession = Auth.auth().currentUser
-        
-        print("DEBUG: user session is \(self.userSession?.uid)")
+        self.answeredPrompt = false;
+        //print("DEBUG: user session is \(self.userSession?.uid)")
+    }
+    
+    func on (){
+        self.answeredPrompt = true
+    }
+    
+    func off (){
+        self.answeredPrompt = false
     }
         
     func login(withEmail email: String, password: String) {
