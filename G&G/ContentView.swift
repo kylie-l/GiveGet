@@ -49,8 +49,8 @@ extension ContentView {
                 default:
                     MessagesView()
                 }
-                
             }
+            //.ignoresSafeArea()
     
             Divider()
                 .padding()

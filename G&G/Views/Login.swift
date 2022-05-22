@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct Login: View {
-    @State private var username = ""
+    @State private var email = ""
     @State private var password = ""
     @State var selection: Int? = nil
     @EnvironmentObject var viewModel: AuthViewModel
@@ -23,23 +23,26 @@ struct Login: View {
                 //details
                 VStack(){
                     
-                    CustomInputField(imageName: "person", placeholderText: "Enter Username", text: $username)
+                    CustomInputField(imageName: "envelope", placeholderText: "Enter Email", text: $email)
                         .padding(.bottom, 25)
                     CustomInputField(imageName: "lock", placeholderText: "Enter Password", text: $password)
                         .padding(.bottom, 25)
                     
-                    Button {
-                        viewModel.login(username: username, password: password)
-                    } label: {
-                        Text("Sign In")
-                            .font(.headline)
-                            .foregroundColor(.white)
-                            .frame(width: 340, height: 50)
-                            .background(.green)
-                            .clipShape(Capsule())
+                    NavigationLink (destination: AnswerPromptView(), tag: 2, selection: $selection) {
+                        Button {
+                            viewModel.login(withEmail: email, password: password)
+                            self.selection = 2
+                        } label: {
+                            Text("Sign In")
+                                .font(.headline)
+                                .foregroundColor(.white)
+                                .frame(width: 340, height: 50)
+                                .background(.green)
+                                .clipShape(Capsule())
+                        }
+                        .shadow(color: .gray, radius: 1, x:0, y:4)
+                        .padding(.bottom, 25)
                     }
-                    .shadow(color: .gray, radius: 1, x:0, y:4)
-                    .padding(.bottom, 25)
                     
                     NavigationLink {
                         Text("Reset password view...")
