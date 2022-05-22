@@ -18,6 +18,13 @@ class FeedViewModel: ObservableObject{
     func fetchPrompts(){
         service.fetchPrompts{prompts in
             self.prompts = prompts
+            print("testasdfasdf")
+            print(prompts.count)
         }
+        
+        
+        
+        
+        
     }
 }

@@ -21,16 +21,16 @@ struct CustomInputField: View {
                         .resizable()
                         .scaledToFit()
                         .frame(width: 25,height: 25)
-                        .foregroundColor(Color(.white))
+                        .foregroundColor(Color("Text Color"))
                 }
                 .frame(width: 50,height: 50)
-                .background(Color.green)
+                .background(Color("Bold Green"))
                 .cornerRadius(30)
                 
                 TextField(placeholderText, text: $text)
                     .foregroundColor(Color(.white))
             }
-            .background(Color.yellow)
+            .background(Color("Light Green"))
             .cornerRadius(30)
         }
         .shadow(color: .gray, radius: 1, x:0, y:4)

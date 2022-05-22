@@ -12,7 +12,7 @@ import Firebase
 struct Prompt: Identifiable, Decodable {
     @DocumentID var id: String?
     let caption: String
-    let timestamp: String
+    let timestamp: Timestamp
     
     
     

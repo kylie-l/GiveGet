@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
 
-    @EnvironmentObject var viewModelAuth: AuthViewModel
+    //@EnvironmentObject var viewModelAuth: AuthViewModel
 
     @ObservedObject var viewModel = FeedViewModel()
 
@@ -17,17 +17,19 @@ struct HomeView: View {
     var body: some View {
         VStack (alignment: .leading, spacing: 12){
             ZStack(alignment: .leading){
-                Color(.systemBlue)
+                Color("Accent Green")
                     .ignoresSafeArea()
                 VStack(alignment: .leading, spacing: 0) {
-                    Text("Daily Journals")
-                        .font(.system(size: 35, weight: .semibold, design: .default))
+                    Text("DAILY JOURNAL")
+                        .font(.system(size: 20, weight: .bold, design: .default))
+                        .padding(.top, 20)
+                        
                     HStack {
                         Text("What are you grateful for today?")
                         
                         Spacer()
                         Button {
-                            viewModelAuth.signOut()
+                            //viewModelAuth.signOut()
                         } label: {
                             Text("Log Out")
                                 .foregroundColor(Color.black)
@@ -35,18 +37,36 @@ struct HomeView: View {
                     }
                 }
                 .padding(.horizontal)
+                .foregroundColor(.white)
             }
             .frame(height: 90)
             
-            ScrollView {
-                LazyVStack {
-                    ForEach(viewModel.prompts) { prompt in
-                        Spacer()
-                        JournalViewRow(prompt: prompt)
-                        Spacer()
+            ZStack{
+                Color("Background Cream")
+                    .ignoresSafeArea()
+                ScrollView{
+                    
+                    /*
+                     LazyVStack {
+                         ForEach(0 ... 10, id: \.self) { _ in
+                             JournalViewRow()
+                             Spacer()
+                         }
+                     }
+                    }*/
+                    VStack {
+                        ForEach(viewModel.prompts) { prompt in
+                            JournalViewRow(prompt: prompt)
+                            
+                        }
+                        
+                       
+                        
                     }
+                    
                 }
             }
+            
         }
         
             
