@@ -15,11 +15,11 @@ struct Login: View {
     //@EnvironmentObject var answeredPrompt: Toggles
     
     var body: some View {
-        ZStack {
-            Color("Background Cream")
-                .ignoresSafeArea()
+        
+        NavigationView {
             //parent container
             VStack {
+                
                 AuthHeadingV(title: "SIGN IN")
                     .padding(.bottom, 50)
                     .foregroundColor(Color("Text Dark Color"))
@@ -108,10 +108,15 @@ struct Login: View {
                 Spacer()
                 
             }
-            .padding(.top, 50)
+            
         }
+            .padding(.top, 75)
+        .background(Color("Background Cream"))
+        .ignoresSafeArea()
+        
         
     }
+}
 }
 
 struct Login_Previews: PreviewProvider {

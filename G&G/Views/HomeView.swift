@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
 
-    //@EnvironmentObject var viewModelAuth: AuthViewModel
+    @EnvironmentObject var viewModelAuth: AuthViewModel
 
     @ObservedObject var viewModel = FeedViewModel()
 
@@ -29,7 +29,7 @@ struct HomeView: View {
                         
                         Spacer()
                         Button {
-                            //viewModelAuth.signOut()
+                            viewModelAuth.signOut()
                         } label: {
                             Text("Log Out")
                                 .foregroundColor(Color.black)
