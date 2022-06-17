@@ -26,9 +26,12 @@ struct UploadService{
     
 
     func fetchPrompts(completion: @escaping([Prompt]) -> Void){
-        Firestore.firestore().collection("prompts").getDocuments { snapshot, _ in
-            guard let documents = snapshot?.documents else {return}
-            let prompts = documents.compactMap({try? $0.data(as: Prompt.self) })
+        Firestore.firestore().collection("prompts").getDocuments { snapshot, _ in guard let documents = snapshot?.documents else {return}
+            
+            
+            let prompts = documents.compactMap({ try? $0.data(as: Prompt.self) })
+            
+            
             completion(prompts)
         }
     }
