@@ -32,6 +32,7 @@ struct Login: View {
                     
                     Button {
                         viewModel.login(withEmail: email, password: password)
+                        viewModel.answeredPrompt = false
                         self.selection = 2
                     } label: {
                         Text("Sign In")
