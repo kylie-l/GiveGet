@@ -19,6 +19,7 @@ struct Login: View {
         NavigationView {
             //parent container
             VStack {
+                Spacer()
                 
                 AuthHeadingV(title: "SIGN IN")
                     .padding(.bottom, 50)
@@ -26,28 +27,28 @@ struct Login: View {
                     
                 
                 //details
-                VStack(){
+                VStack(spacing: 25){
                     
                     CustomInputField(imageName: "envelope", placeholderText: "Enter Email", text: $email)
-                        .padding(.bottom, 25)
+                        .padding(.leading, 35)
+                        .padding(.trailing, 35)
                     CustomInputField(imageName: "lock", placeholderText: "Enter Password", text: $password)
-                        .padding(.bottom, 25)
-                    
-
-                    
+                        .padding(.leading, 35)
+                        .padding(.trailing, 35)
+                    /*
                     Button {
                         viewModel.login(withEmail: email, password: password)
                         viewModel.answeredPrompt = false
                         self.selection = 2
                     } label: {
+                        
                         Text("Sign In")
                             .font(.headline)
                             .foregroundColor(.white)
                             .frame(width: 340, height: 50)
-                            .background(.green)
+                            .background(Color("Bold Green"))
                             .clipShape(Capsule())
-
-                    
+                    */
                         Button {
                             viewModel.login(withEmail: email, password: password)
                             self.selection = 2
@@ -59,12 +60,11 @@ struct Login: View {
                                 .background(Color("Bold Green"))
                                 .clipShape(Capsule())
                         }
-                        .shadow(color: .gray, radius: 1, x:0, y:4)
+                        .shadow(color: .gray, radius: 1, x:0, y:2)
                         .padding(.bottom, 25)
 
-                    
-                    .shadow(color: .gray, radius: 1, x:0, y:4)
-                    .padding(.bottom, 25)
+                    }
+                    .shadow(color: .gray, radius: 1, x:0, y:1)
                     
                     NavigationLink {
                         Text("Reset password view...")
@@ -88,6 +88,8 @@ struct Login: View {
                         }
                     }
                     .padding(.bottom, 20)
+                    .padding(.leading, 35)
+                    .padding(.trailing, 35)
                     .foregroundColor(Color("Text Dark Color"))
                     
                     NavigationLink (destination: SignUpView(), tag: 1, selection: $selection) {
@@ -103,22 +105,19 @@ struct Login: View {
                         }
                         .cornerRadius(25)
                     }
-                }
                 .padding(.horizontal, 40)
                 
                 Spacer()
                 
             }
-            
-        }
             .padding(.top, 75)
-        .background(Color("Background Cream"))
-        .ignoresSafeArea()
-        
-        
+            .ignoresSafeArea()
+            .background(Color("Background Cream"))
+        }
+
     }
 }
-}
+
 
 struct Login_Previews: PreviewProvider {
     static var previews: some View {

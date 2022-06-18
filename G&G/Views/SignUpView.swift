@@ -52,9 +52,8 @@ struct SignUpView: View {
                 }
                 .padding(32)
                 
-                Spacer()
             }
-            
+        
         }
         
     }
