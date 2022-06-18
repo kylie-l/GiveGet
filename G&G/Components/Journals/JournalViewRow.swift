@@ -10,11 +10,9 @@ import SwiftUI
 struct JournalViewRow: View {
     let prompt: Prompt
     
-    
     var body: some View {
         
         VStack(alignment: .leading, spacing: 12){
-            
             
             //profile pic + username + time
             HStack(alignment: .top, spacing: 12) {
@@ -22,10 +20,12 @@ struct JournalViewRow: View {
                     .frame(width: 40, height: 40)
                 
                 //username + time
-                VStack(alignment: .leading, spacing: 3){
-                    Text("annhockey20")
-                        .foregroundColor(.black)
-                    //Text(prompt.timestamp.FormatString)
+                if let user = prompt.user {
+                    VStack(alignment: .leading, spacing: 3){
+                        Text(user.username)
+                            .foregroundColor(.black)
+                        //Text(prompt.timestamp.FormatString)
+                    }
                 }
             }
             
@@ -36,10 +36,9 @@ struct JournalViewRow: View {
                     .multilineTextAlignment(.leading)
                     .aspectRatio(contentMode: .fit)
                     .foregroundColor(Color("Text Dark Color"))
-                
             }
-            .aspectRatio(contentMode: .fit)
-            //.frame(width: 300, height: .infinity, alignment: .center)
+            //.aspectRatio(contentMode: .fit)
+            .frame(width: 400, alignment: .center)
             .cornerRadius(20)
         }
         .padding()

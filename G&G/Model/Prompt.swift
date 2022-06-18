@@ -8,14 +8,11 @@
 import FirebaseFirestoreSwift
 import Firebase
 
-
 struct Prompt: Identifiable, Decodable {
     @DocumentID var id: String?
     let caption: String
     let timestamp: Timestamp
+    let uid: String
     
-    
-    
-    
-    
+    var user: User?
 }

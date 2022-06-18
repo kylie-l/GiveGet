@@ -9,7 +9,10 @@ import Firebase
 
 struct UploadService{
     func uploadPrompt(caption: String, completion: @escaping(Bool) -> Void){
-        let data = ["caption": caption,
+        guard let uid = Auth.auth().currentUser?.uid else {return}
+        
+        let data = ["uid": uid,
+                    "caption": caption,
                     "timestamp": Timestamp(date: Date())] as [String : Any]
         
         Firestore.firestore().collection("prompts").document().setData(data) { error in
@@ -22,15 +25,13 @@ struct UploadService{
         }
         
     }
-    
-    
 
     func fetchPrompts(completion: @escaping([Prompt]) -> Void){
-        Firestore.firestore().collection("prompts").getDocuments { snapshot, _ in guard let documents = snapshot?.documents else {return}
-            
+        Firestore.firestore().collection("prompts")
+            .getDocuments { snapshot, _ in
+                guard let documents = snapshot?.documents else {return}
             
             let prompts = documents.compactMap({ try? $0.data(as: Prompt.self) })
-            
             
             completion(prompts)
         }

@@ -15,11 +15,11 @@ struct HomeView: View {
 
     
     var body: some View {
-        VStack (alignment: .leading, spacing: 12){
+        VStack (alignment: .leading){
             ZStack(alignment: .leading){
                 Color("Accent Green")
                     .ignoresSafeArea()
-                VStack(alignment: .leading, spacing: 0) {
+                VStack(alignment: .leading) {
                     Text("DAILY JOURNAL")
                         .font(.system(size: 20, weight: .bold, design: .default))
                         .padding(.top, 20)
@@ -39,7 +39,7 @@ struct HomeView: View {
                 .padding(.horizontal)
                 .foregroundColor(.white)
             }
-            .frame(height: 90)
+            .frame(height: 80)
             
             ZStack{
                 Color("Background Cream")
@@ -54,14 +54,11 @@ struct HomeView: View {
                          }
                      }
                     }*/
-                    VStack {
+                    LazyVStack {
                         ForEach(viewModel.prompts) { prompt in
                             JournalViewRow(prompt: prompt)
-                            
+                                .padding()
                         }
-                        
-                       
-                        
                     }
                     
                 }

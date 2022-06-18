@@ -10,6 +10,7 @@ import Foundation
 class FeedViewModel: ObservableObject{
     @Published var prompts = [Prompt]()
     let service = UploadService()
+    let userService = UserService()
     
     init() {
         fetchPrompts()
@@ -18,13 +19,14 @@ class FeedViewModel: ObservableObject{
     func fetchPrompts(){
         service.fetchPrompts{prompts in
             self.prompts = prompts
-            print("testasdfasdf")
-            print(prompts.count)
+            
+            for i in 0 ..< prompts.count {
+                let uid = prompts[i].uid
+                
+                self.userService.fetchUser(withUid: uid) { user in
+                    self.prompts[i].user = user
+                }
+            }
         }
-        
-        
-        
-        
-        
     }
 }
