@@ -32,9 +32,9 @@ struct SignUpView: View {
                         .padding(.bottom, 20)
                     CustomInputField(imageName: "envelope", placeholderText: "Enter Email", text: $email)
                         .padding(.bottom, 20)
-                    CustomInputField(imageName: "lock", placeholderText: "Enter Password", text: $password)
+                    CustomInputField(imageName: "lock", placeholderText: "Enter Password",isSecureField: true, text: $password)
                         .padding(.bottom, 20)
-                    CustomInputField(imageName: "lock", placeholderText: "Confirm Password", text: $confirm)
+                    CustomInputField(imageName: "lock", placeholderText: "Confirm Password", isSecureField: true, text: $confirm)
                         .padding(.bottom, 40)
                     
                     Button {

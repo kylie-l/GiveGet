@@ -10,6 +10,7 @@ import SwiftUI
 struct CustomInputField: View {
     let imageName: String
     let placeholderText: String
+    var isSecureField: Bool? = false
     @Binding var text: String
     
     var body: some View {
@@ -27,8 +28,15 @@ struct CustomInputField: View {
                 .background(Color("Bold Green"))
                 .cornerRadius(30)
                 
-                TextField(placeholderText, text: $text)
-                    .foregroundColor(Color(.white))
+                if isSecureField ?? false {
+                    SecureField(placeholderText, text: $text)
+                }
+                else {
+                    TextField(placeholderText, text: $text)
+                        .foregroundColor(Color(.white))
+                        //.disableAutocorrection(true)
+                }
+                
             }
             .background(Color("Light Green"))
             .cornerRadius(30)
@@ -41,6 +49,7 @@ struct CustomInputField_Previews: PreviewProvider {
     static var previews: some View {
         CustomInputField(imageName: "envelope",
                          placeholderText: "Email",
+                         isSecureField: false,
                          text: .constant(""))
     }
 }

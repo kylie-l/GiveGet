@@ -34,6 +34,7 @@ struct JournalViewRow: View {
                 Color("Accent Cream")
                 Text(prompt.caption)
                     .multilineTextAlignment(.leading)
+                    .fixedSize(horizontal: false, vertical: true)
                     .aspectRatio(contentMode: .fit)
                     .foregroundColor(Color("Text Dark Color"))
                     .padding()
