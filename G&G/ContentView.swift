@@ -59,13 +59,13 @@ extension ContentView {
             }
             //.ignoresSafeArea()
     
-            Divider()
-                .padding()
+           // Divider()
+               // .padding(.horizontal)
             
             //tab bar
             HStack {
+                Spacer()
                 ForEach(0..<3, id: \.self) { number in
-                    Spacer()
                     Button(action: {
                         self.selectedIndex = number
                     }, label: {
@@ -79,5 +79,6 @@ extension ContentView {
                 }
             }
         }
+        .background(Color("Accent Green"))
     }
 }

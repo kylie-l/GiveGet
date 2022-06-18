@@ -16,31 +16,35 @@ struct HomeView: View {
     
     var body: some View {
         VStack (alignment: .leading){
-            ZStack(alignment: .leading){
-                Color("Accent Green")
-                    .ignoresSafeArea()
-                VStack(alignment: .leading) {
-                    Text("DAILY JOURNAL")
-                        .font(.system(size: 20, weight: .bold, design: .default))
-                        .padding(.top, 20)
-                        
-                    HStack {
-                        Text("What are you grateful for today?")
-                        
-                        Spacer()
-                        Button {
-                            viewModelAuth.signOut()
-                        } label: {
-                            Text("Log Out")
-                                .foregroundColor(Color.black)
-                        }
+            
+            Spacer()
+                .frame(height:30)
+            //title
+            VStack(alignment: .leading) {
+                
+                Text("DAILY JOURNAL")
+                    .font(.system(size: 20, weight: .bold, design: .default))
+                    //.padding(.top, 20)
+                    
+                HStack {
+                    Text("What are you grateful for today?")
+                    
+                    Spacer()
+                    Button {
+                        viewModelAuth.signOut()
+                    } label: {
+                        Text("Log Out")
+                            .foregroundColor(Color.black)
                     }
                 }
-                .padding(.horizontal)
-                .foregroundColor(.white)
+                .padding(.bottom, 5)
             }
-            .frame(height: 80)
+            .padding(.horizontal)
+            //.padding(.top, 25)
+            .foregroundColor(.white)
             
+            
+            //feed
             ZStack{
                 Color("Background Cream")
                     .ignoresSafeArea()
@@ -63,6 +67,7 @@ struct HomeView: View {
                     
                 }
             }
+            .cornerRadius(10)
             
         }
         

@@ -111,8 +111,9 @@ struct Login: View {
                 
             }
             .padding(.top, 75)
-            .ignoresSafeArea()
             .background(Color("Background Cream"))
+            .ignoresSafeArea()
+            
         }
 
     }

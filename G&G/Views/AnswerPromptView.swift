@@ -78,9 +78,6 @@ struct AnswerPromptView: View {
                                 .font(.system(size: 22, weight: .bold))
                                 .padding(.top, 70)
                                 
-                            
-                                
-                                
                         }
                     
                     }

@@ -20,6 +20,7 @@ struct G_GApp: App {
         WindowGroup {
             NavigationView {
                 ContentView()
+                    .navigationBarHidden(true)
             }
             .environmentObject(viewModel)
         }
