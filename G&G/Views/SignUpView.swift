@@ -22,7 +22,7 @@ struct SignUpView: View {
             
             VStack {
                 AuthHeadingV(title: "SIGN UP")
-                    .padding(.bottom, 20)
+                    .padding(.bottom, 10)
                     .padding(.top, 20)
                     .foregroundColor(Color("Text Dark Color"))
                 
@@ -49,8 +49,11 @@ struct SignUpView: View {
                             .clipShape(Capsule())
                     }
                     .shadow(color: .gray, radius: 1, x:0, y:4)
+                    
+                    Spacer()
                 }
                 .padding(32)
+                .padding(.bottom, 50)
                 
             }
         

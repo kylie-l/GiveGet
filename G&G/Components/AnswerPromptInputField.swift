@@ -19,20 +19,27 @@ struct AnswerPromptInputField: View {
     
     
     var body: some View {
-        ZStack(alignment: .topLeading){
+        
+        
+        VStack{
+            Spacer()
             
-            if text.isEmpty{
-                Text(placeholder)
-                    .foregroundColor(Color(.placeholderText))
+            ZStack(alignment: .topLeading){
+                
+                if text.isEmpty{
+                    Text(placeholder)
+                        .foregroundColor(Color(.placeholderText))
+                        .padding()
+                }
+                TextEditor(text: $text)
                     .padding()
+            
             }
-            TextEditor(text: $text)
-                .padding()
-        
+            .padding(.horizontal, 35)
+            .padding(.vertical, 40)
+            .font(.body)
+            
+            Spacer()
         }
-        .padding(.horizontal, 35)
-        .padding(.vertical, 20)
-        .font(.body)
-        
     }
 }
