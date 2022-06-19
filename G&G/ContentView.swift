@@ -34,8 +34,9 @@ struct ContentView: View {
                         mainInterfaceView
                         let _ = print("Hio")
                     }
-                    let _ = print(user.answered)
                 }
+                
+                //let _ = print(user.answered)
                 let _ = print("Hv")
             }
         }

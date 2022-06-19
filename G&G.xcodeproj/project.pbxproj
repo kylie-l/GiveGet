@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B803F8F8285EA1D600733EA4 /* ProfileSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B803F8F7285EA1D600733EA4 /* ProfileSelectorView.swift */; };
 		B815E1EB2839878C00A70C5F /* G_GApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B815E1EA2839878C00A70C5F /* G_GApp.swift */; };
 		B815E1ED2839878C00A70C5F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B815E1EC2839878C00A70C5F /* ContentView.swift */; };
 		B815E1EF283987A000A70C5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B815E1EE283987A000A70C5F /* Assets.xcassets */; };
@@ -57,6 +58,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B803F8F7285EA1D600733EA4 /* ProfileSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSelectorView.swift; sourceTree = "<group>"; };
 		B815E1E72839878C00A70C5F /* G&G.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "G&G.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B815E1EA2839878C00A70C5F /* G_GApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = G_GApp.swift; sourceTree = "<group>"; };
 		B815E1EC2839878C00A70C5F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 				B8B0D43E2839C37500D7ACCE /* SignUpView.swift */,
 				B8B0D43128399C5300D7ACCE /* HomeView.swift */,
 				B8B0D43528399C7E00D7ACCE /* JournalView.swift */,
+				B803F8F7285EA1D600733EA4 /* ProfileSelectorView.swift */,
 				B8B0D43328399C7000D7ACCE /* AssignedView.swift */,
 				B8B0D43728399C8A00D7ACCE /* MessagesView.swift */,
 				E3AEB48D2839FC22009CA5D7 /* AnswerPromptView.swift */,
@@ -383,6 +386,7 @@
 				B8B0D4412839D22300D7ACCE /* CustomInputField.swift in Sources */,
 				E32E38F4283A39E5006EF481 /* FeedViewModel.swift in Sources */,
 				B8B0D43628399C7E00D7ACCE /* JournalView.swift in Sources */,
+				B803F8F8285EA1D600733EA4 /* ProfileSelectorView.swift in Sources */,
 				E347F1DB283A079C00919311 /* AnswerPromptInputField.swift in Sources */,
 				E3AEB48E2839FC22009CA5D7 /* AnswerPromptView.swift in Sources */,
 				E32E38F2283A33DE006EF481 /* UploadPrompt.swift in Sources */,
