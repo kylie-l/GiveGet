@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import Firebase
+import FirebaseFirestoreSwift
 
 struct AnswerPromptView: View {
     
@@ -23,16 +25,15 @@ struct AnswerPromptView: View {
             ZStack{
                 Color("Accent Green")
                     .ignoresSafeArea()
+                    .shadow(color: .gray, radius: 1, x:0, y:2)
                 
                 //TEXT
                 VStack{
                     Text("DAILY JOURNAL")
-                        .padding()
+                        .padding(.top)
+                        .padding(.horizontal)
                         .font(.system(size: 22, weight: .bold))
                         
-                        
-                        
-                    
                     Text("What are you grateful for today?")
                     
                 }
@@ -50,23 +51,27 @@ struct AnswerPromptView: View {
                 
                 VStack{
                     
+                    //text box
                     ZStack{
-                        
                         RoundedRectangle(cornerRadius: 30)
-                            .frame(width: 327, height: 294)
+                            .frame(width: 327, height: 380)
                             .foregroundColor(Color("Accent Cream"))
+                            .shadow(color: .gray, radius: 1, x:0, y:2)
                         
                         AnswerPromptInputField("Write your message", text: $promptAnswer)
-                        
+                            .padding()
+                    
                         
                     }
                     
-                    
-                    NavigationLink (destination: HomeView(), tag: 1, selection: $selection) {
+                    //NavigationLink (destination: HomeView(), tag: 1, selection: $selection) {
                         Button {
+                            //answered prompt
                             viewModel.uploadPrompt(withCaption: promptAnswer)
+                            authViewModel.currentUser?.answered = true;
                             authViewModel.on()
-                            self.selection = 1
+                            
+                           // self.selection = 1
                         } label: {
                             
                             Text("SUBMIT")
@@ -76,25 +81,19 @@ struct AnswerPromptView: View {
                                 .foregroundColor(.white)
                                 .cornerRadius(20)
                                 .font(.system(size: 22, weight: .bold))
-                                .padding(.top, 70)
+                                .padding(.bottom, 70)
+                                .shadow(color: .gray, radius: 1, x:0, y:2)
                                 
                         }
                     
-                    }
+                    //}
+                    
                 }
-                
-               
-                
-                
                 
             }
             
-            
-            
-            
-            
-            
         }
+        .background(Color("Background Cream"))
     }
 }
 

@@ -25,12 +25,18 @@ struct ContentView: View {
                 Login()
             }
             else { //have logged in user
-                if viewModel.answeredPrompt == false { //answeredprompt
-                    AnswerPromptView()
+                if let user = viewModel.currentUser {
+                    if user.answered == false { //answeredprompt
+                        let _ = print("Hi")
+                        AnswerPromptView()
+                    }
+                    else {
+                        mainInterfaceView
+                        let _ = print("Hio")
+                    }
+                    let _ = print(user.answered)
                 }
-                else {
-                    mainInterfaceView
-                }
+                let _ = print("Hv")
             }
         }
     }

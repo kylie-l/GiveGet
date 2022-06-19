@@ -32,7 +32,7 @@ struct Login: View {
                     CustomInputField(imageName: "envelope", placeholderText: "Enter Email", text: $email)
                         .padding(.leading, 35)
                         .padding(.trailing, 35)
-                    CustomInputField(imageName: "lock", placeholderText: "Enter Password", text: $password)
+                    CustomInputField(imageName: "lock", placeholderText: "Enter Password", isSecureField: true, text: $password)
                         .padding(.leading, 35)
                         .padding(.trailing, 35)
                     /*

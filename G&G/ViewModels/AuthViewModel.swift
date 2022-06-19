@@ -24,11 +24,11 @@ class AuthViewModel: ObservableObject {
     }
     
     func on (){
-        self.answeredPrompt = true
+        self.currentUser?.answered = true
     }
     
     func off (){
-        self.answeredPrompt = false
+        self.currentUser?.answered = false
     }
         
     func login(withEmail email: String, password: String) {
@@ -40,6 +40,7 @@ class AuthViewModel: ObservableObject {
 
                guard let user = result?.user else { return }
                self.userSession = user
+               //self.fetchUser()
                print("DEBUG: Did log user in..")
            }
     }
@@ -68,13 +69,14 @@ class AuthViewModel: ObservableObject {
             let data = ["email": email,
                         "username": username.lowercased(),
                         "password": password,
-                        "uid": user.uid]
+                        "uid": user.uid,
+                        "answered": false] as [String : Any]
                 
-                Firestore.firestore().collection("users")
-                    .document(user.uid)
-                    .setData(data) { _ in
-                        print("DEBUG: did upload user data")
-                    }
+            Firestore.firestore().collection("users")
+                .document(user.uid)
+                .setData(data) { _ in
+                    print("DEBUG: did upload user data")
+                }
         }
     }
     
