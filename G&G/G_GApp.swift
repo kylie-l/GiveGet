@@ -21,6 +21,7 @@ struct G_GApp: App {
             NavigationView {
                 ContentView()
                     .navigationBarHidden(true)
+                //ProfileSelectorView()
             }
             .environmentObject(viewModel)
         }

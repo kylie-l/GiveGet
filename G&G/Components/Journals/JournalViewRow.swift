@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct JournalViewRow: View {
     let prompt: Prompt
@@ -15,17 +16,25 @@ struct JournalViewRow: View {
         VStack(alignment: .leading, spacing: 12){
             
             //profile pic + username + time
-            HStack(alignment: .top, spacing: 12) {
-                Circle()
-                    .frame(width: 40, height: 40)
-                
-                //username + time
-                if let user = prompt.user {
+            if let user = prompt.user {
+                HStack(alignment: .top, spacing: 12) {
+                    KFImage(URL(string: user.profileImageUrl))
+                        .resizable()
+                        .scaledToFill()
+                        .clipShape(Circle())
+                        .frame(width: 40, height: 40)
+                    
+                    //username + time
+                    
                     VStack(alignment: .leading, spacing: 3){
                         Text(user.username)
                             .foregroundColor(.black)
+                        Text("\(prompt.timestamp.dateValue().formatted(date: .omitted, time: .shortened))")
+                            .font(.caption)
+                            .foregroundColor(.gray)
                         //Text(prompt.timestamp.FormatString)
                     }
+                    
                 }
             }
             

@@ -12,11 +12,12 @@ struct Login: View {
     @State private var password = ""
     @State var selection: Int? = nil
     @EnvironmentObject var viewModel: AuthViewModel
+    //@Environment(\.presentationMode) var presentationMode
     //@EnvironmentObject var answeredPrompt: Toggles
     
     var body: some View {
         
-        NavigationView {
+       // NavigationView {
             //parent container
             VStack {
                 Spacer()
@@ -111,13 +112,13 @@ struct Login: View {
                 
             }
             .padding(.top, 75)
-            .background(Color("Background Cream"))
             .ignoresSafeArea()
+            .background(Color("Background Cream"))
             
         }
 
     }
-}
+//}
 
 
 struct Login_Previews: PreviewProvider {

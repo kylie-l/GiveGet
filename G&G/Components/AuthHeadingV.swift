@@ -13,12 +13,15 @@ struct AuthHeadingV: View {
     var body: some View {
         //heading
         VStack {
-            Text("GG")
-                .font(.system(size: 150))
+            Image("gglogo")
+                .resizable()
+                .frame(width: 290, height: 215)
+                .scaledToFill()
+                //.font(.system(size: 150))
             Text(title)
                 .font(.system(size: 50, weight: .regular, design: .default))
         }
-        .frame(height: 200)
+        //.frame(height: 200)
     }
 }
 

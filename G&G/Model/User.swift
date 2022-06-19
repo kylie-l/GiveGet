@@ -12,5 +12,5 @@ struct User: Identifiable, Decodable {
     let username: String
     let email: String
     var answered: Bool = false
-    //let profileImageUrl: String
+    let profileImageUrl: String
 }

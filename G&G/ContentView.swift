@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @State var selectedIndex = 1
     //@EnvironmentObject var answered: Toggles
+    //@Environment(\.presentationMode) var presentationMode
     @EnvironmentObject var viewModel: AuthViewModel
     
     let icons = [
