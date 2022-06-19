@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import Firebase
+import FirebaseFirestoreSwift
 
 struct AnswerPromptView: View {
     
@@ -64,9 +66,12 @@ struct AnswerPromptView: View {
                     
                     //NavigationLink (destination: HomeView(), tag: 1, selection: $selection) {
                         Button {
+                            //answered prompt
                             viewModel.uploadPrompt(withCaption: promptAnswer)
+                            authViewModel.currentUser?.answered = true;
                             authViewModel.on()
-                            self.selection = 1
+                            
+                           // self.selection = 1
                         } label: {
                             
                             Text("SUBMIT")

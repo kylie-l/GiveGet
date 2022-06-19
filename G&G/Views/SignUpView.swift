@@ -12,6 +12,7 @@ struct SignUpView: View {
     @State private var email = ""
     @State private var password = ""
     @State private var confirm = ""
+    @State var selection: Int? = nil
     @Environment(\.presentationMode) var presentationMode
     @EnvironmentObject var viewModel: AuthViewModel
     
@@ -37,18 +38,24 @@ struct SignUpView: View {
                     CustomInputField(imageName: "lock", placeholderText: "Confirm Password", isSecureField: true, text: $confirm)
                         .padding(.bottom, 40)
                     
-                    Button {
-                        viewModel.register(username:username,
-                                           password: password, confirm: confirm, withEmail: email)
-                    } label: {
-                        Text("CONFIRM")
-                            .font(.headline)
-                            .foregroundColor(.white)
-                            .frame(width: 340, height: 50)
-                            .background(Color("Bold Green"))
-                            .clipShape(Capsule())
+                    NavigationLink (destination: AnswerPromptView(), tag: 1, selection: $selection)
+                    {
+                        Button {
+                            let _ = print(viewModel.currentUser?.answered ?? "no")
+                            //viewModel.currentUser?.answered = false
+                            viewModel.register(username:username,
+                                               password: password, confirm: confirm, withEmail: email)
+                           // self.selection = 1
+                        } label: {
+                            Text("CONFIRM")
+                                .font(.headline)
+                                .foregroundColor(.white)
+                                .frame(width: 340, height: 50)
+                                .background(Color("Bold Green"))
+                                .clipShape(Capsule())
+                        }
+                        .shadow(color: .gray, radius: 1, x:0, y:4)
                     }
-                    .shadow(color: .gray, radius: 1, x:0, y:4)
                     
                     Spacer()
                 }
