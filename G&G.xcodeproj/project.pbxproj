@@ -36,6 +36,11 @@
 		E32E38F4283A39E5006EF481 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32E38F3283A39E5006EF481 /* FeedViewModel.swift */; };
 		E32E38F7283A495A006EF481 /* Prompt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32E38F6283A495A006EF481 /* Prompt.swift */; };
 		E347F1DB283A079C00919311 /* AnswerPromptInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E347F1DA283A079C00919311 /* AnswerPromptInputField.swift */; };
+		E3596336285D978D0093D11B /* TitleRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3596335285D978C0093D11B /* TitleRow.swift */; };
+		E3596338285D9D470093D11B /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3596337285D9D470093D11B /* Message.swift */; };
+		E359633A285D9D9C0093D11B /* MessageBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3596339285D9D9C0093D11B /* MessageBubble.swift */; };
+		E359633C285E80040093D11B /* MessageField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E359633B285E80040093D11B /* MessageField.swift */; };
+		E359633E285E83D70093D11B /* MessagesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E359633D285E83D70093D11B /* MessagesManager.swift */; };
 		E3AEB48E2839FC22009CA5D7 /* AnswerPromptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AEB48D2839FC22009CA5D7 /* AnswerPromptView.swift */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +90,11 @@
 		E32E38F3283A39E5006EF481 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 		E32E38F6283A495A006EF481 /* Prompt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prompt.swift; sourceTree = "<group>"; };
 		E347F1DA283A079C00919311 /* AnswerPromptInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerPromptInputField.swift; sourceTree = "<group>"; };
+		E3596335285D978C0093D11B /* TitleRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleRow.swift; sourceTree = "<group>"; };
+		E3596337285D9D470093D11B /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		E3596339285D9D9C0093D11B /* MessageBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageBubble.swift; sourceTree = "<group>"; };
+		E359633B285E80040093D11B /* MessageField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageField.swift; sourceTree = "<group>"; };
+		E359633D285E83D70093D11B /* MessagesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesManager.swift; sourceTree = "<group>"; };
 		E3AEB48D2839FC22009CA5D7 /* AnswerPromptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerPromptView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -199,6 +209,9 @@
 				B8B0D4402839D22300D7ACCE /* CustomInputField.swift */,
 				B8B0D4422839E98300D7ACCE /* AuthHeadingV.swift */,
 				E347F1DA283A079C00919311 /* AnswerPromptInputField.swift */,
+				E3596335285D978C0093D11B /* TitleRow.swift */,
+				E359633B285E80040093D11B /* MessageField.swift */,
+				E3596339285D9D9C0093D11B /* MessageBubble.swift */,
 				B8B0D43B2839B2DB00D7ACCE /* Journals */,
 			);
 			path = Components;
@@ -227,6 +240,7 @@
 			children = (
 				E32E38EF283A32BE006EF481 /* UploadService.swift */,
 				B89CECDD285D11CD007B123B /* UserService.swift */,
+				E359633D285E83D70093D11B /* MessagesManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -236,6 +250,7 @@
 			children = (
 				E32E38F6283A495A006EF481 /* Prompt.swift */,
 				B89CECDF285D251C007B123B /* User.swift */,
+				E3596337285D9D470093D11B /* Message.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -390,15 +405,20 @@
 				E32E38F7283A495A006EF481 /* Prompt.swift in Sources */,
 				B89CECE0285D251D007B123B /* User.swift in Sources */,
 				B8B0D4302839956D00D7ACCE /* Login.swift in Sources */,
+				E359633A285D9D9C0093D11B /* MessageBubble.swift in Sources */,
 				B8B0D43228399C5300D7ACCE /* HomeView.swift in Sources */,
 				B815E1ED2839878C00A70C5F /* ContentView.swift in Sources */,
 				E32E38F0283A32BE006EF481 /* UploadService.swift in Sources */,
+				E359633E285E83D70093D11B /* MessagesManager.swift in Sources */,
 				B8B0D4432839E98300D7ACCE /* AuthHeadingV.swift in Sources */,
 				B89CECDE285D11CD007B123B /* UserService.swift in Sources */,
 				B8B0D43828399C8A00D7ACCE /* MessagesView.swift in Sources */,
 				B8B0D43D2839B2FD00D7ACCE /* JournalViewRow.swift in Sources */,
+				E3596338285D9D470093D11B /* Message.swift in Sources */,
+				E3596336285D978D0093D11B /* TitleRow.swift in Sources */,
 				B8B0D43428399C7000D7ACCE /* AssignedView.swift in Sources */,
 				B8B0D43F2839C37500D7ACCE /* SignUpView.swift in Sources */,
+				E359633C285E80040093D11B /* MessageField.swift in Sources */,
 				B815E1EB2839878C00A70C5F /* G_GApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

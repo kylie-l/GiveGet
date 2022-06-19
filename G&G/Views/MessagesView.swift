@@ -8,14 +8,27 @@
 import SwiftUI
 
 struct MessagesView: View {
+    @StateObject var messagesManager = MessagesManager()
     var body: some View {
-        NavigationView {
-            Spacer()
-            ZStack {
+        VStack {
+            VStack {
+                TitleRow()
                 
+                ScrollView{
+                    ForEach(messagesManager.messages, id: \.id) { message in
+                        MessageBubble(message: message)
+                    }
+                }
+                .padding()
+                .background(Color("Background Cream"))
             }
-            .navigationTitle("Your Messages")
+            .background(Color("Accent Green"))
+            
+            MessageField()
+                .environmentObject(messagesManager)
+                
         }
+        .background(Color("Background Cream"))
     }
 }
 
